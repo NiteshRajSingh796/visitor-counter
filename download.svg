@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1566.8807499999998 1179.1" width="1566.8807499999998" height="1179.1" style="--bg:#18181B;--fg:#F4F4F5;--line:#71717A;--muted:#A1A1AA;--surface:#27272A;--border:#3F3F46;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="CLIENT_TIER" data-label="1. Client &amp; Testing Tier">
+  <rect x="610.1738749999998" y="40" width="581.8309999999999" height="96.9" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="610.1738749999998" y="40" width="581.8309999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="622.1738749999998" y="54" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">1. Client &amp; Testing Tier</text>
+</g>
+<g class="subgraph" data-id="EDGE_ROUTER" data-label="2. Edge Layer &amp; Load Balancer">
+  <rect x="608.7675416666666" y="196.9" width="341.45099999999985" height="113.80000000000001" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="608.7675416666666" y="196.9" width="341.45099999999985" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="620.7675416666666" y="210.9" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">2. Edge Layer &amp; Load Balancer</text>
+</g>
+<g class="subgraph" data-id="PRIMARY_K8S" data-label="3. Primary Region: Kubernetes Cluster (Minikube)">
+  <rect x="40" y="415" width="1138.9187499999998" height="724.0999999999999" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="415" width="1138.9187499999998" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="52" y="429" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">3. Primary Region: Kubernetes Cluster (Minikube)</text>
+<g class="subgraph" data-id="HPA_SUBSYSTEM" data-label="Autoscaling &amp; Telemetry Subsystem">
+  <rect x="822.7085" y="459" width="340.21025" height="215.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="822.7085" y="459" width="340.21025" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="834.7085" y="473" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Autoscaling &amp; Telemetry Subsystem</text>
+</g>
+<g class="subgraph" data-id="POD_FLEET" data-label="Flask Deployment Fleet (visitor-app:latest - 199MB)">
+  <rect x="142.17850000000004" y="819.5" width="985.231" height="96.9" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="142.17850000000004" y="819.5" width="985.231" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="154.17850000000004" y="833.5" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Flask Deployment Fleet (visitor-app:latest - 199MB)</text>
+</g>
+</g>
+<g class="subgraph" data-id="SECONDARY_CLOUD" data-label="4. Secondary Region: Cloud Standby (AWS us-east-1 DR)">
+  <rect x="1206.9187499999998" y="415.0000000000001" width="319.962" height="229.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="1206.9187499999998" y="415.0000000000001" width="319.962" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1218.9187499999998" y="429.0000000000001" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">4. Secondary Region: Cloud Standby (AWS us-east-1 DR)</text>
+</g>
+<polyline class="edge" data-from="Client" data-to="Proxy" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="727.9178749999999,120.9 727.9178749999999,180.9 779.4930416666665,180.9 779.4930416666665,240.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="LoadGen" data-to="Proxy" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1016.8333749999997,120.9 1016.8333749999997,180.9 779.4930416666665,180.9 779.4930416666665,240.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Proxy" data-to="K8sSvc" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Active Primary Route (Normal Operation)" points="727.9178749999999,294.7 727.9178749999999,328.70000000000005 377.8515,328.70000000000005 377.85149999999993,728.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Proxy" data-to="CloudStandby" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="Failover Route (Triggered on Primary Outage)" points="831.0682083333331,294.7 831.0682083333331,328.70000000000016 1366.8997499999996,328.70000000000016 1366.8997499999998,459.0000000000001" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="K8sSvc" data-to="Pod1" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="377.85149999999993,765.5 377.85149999999993,814.5 961.13,814.5 961.13,863.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="K8sSvc" data-to="Pod2" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="377.85149999999993,765.5 377.85149999999993,814.5 630.348,814.5 630.348,863.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="K8sSvc" data-to="Pod3" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="377.85149999999993,765.5 377.85149999999993,814.5 304.01200000000006,814.5 304.01200000000006,863.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Config" data-to="POD_FLEET" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="Injects Environment" points="121.8195,259.6 121.8195,362.5 254.012,362.5 254.012,404.5" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Metrics" data-to="POD_FLEET" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Scrapes Real-Time CPU" points="859.8688333333333,141.8 859.8688333333333,153.8 814.6257499999999,153.8 814.6257499999999,277.6 813.8969999999999,277.6 813.8969999999999,362.5 931.1299999999999,362.5 931.1299999999999,404.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="HPA" data-to="POD_FLEET" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Dynamically Scales (2 to 6 Pods)" points="966.27225,243.60000000000002 966.27225,277.6 967.001,277.6 967.001,362.5 941.1299999999999,362.5 941.1299999999999,404.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Pod1" data-to="RedisSvc" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="961.13,900.4 961.13,935.4 592.0735,935.4 592.0735,970.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Pod2" data-to="RedisSvc" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="630.348,900.4 630.348,935.4 592.0735,935.4 592.0735,970.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Pod3" data-to="RedisSvc" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="304.01200000000006,900.4 304.01200000000006,935.4 592.0735,935.4 592.0735,970.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="RedisSvc" data-to="RedisPod" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="592.0735,1007.3 592.0735,1055.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Metrics" data-to="HPA" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="961.0291666666666,556.8 961.0291666666666,568.8 1006.27225,568.8 1006.27225,604.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CloudStandby" data-to="CloudState" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1366.8997499999998,512.8000000000002 1366.8997499999998,560.8000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="Proxy" data-to="K8sSvc" data-label="Active Primary Route (Normal Operation)">
+  <rect x="274.8515" y="335.70000000000005" width="205.354" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="377.5285" y="350.85" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Active Primary Route (Normal Operation)</text>
+</g>
+<g class="edge-label" data-from="Proxy" data-to="CloudStandby" data-label="Failover Route (Triggered on Primary Outage)">
+  <rect x="1250.3997499999996" y="335.70000000000016" width="232.08400000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1366.4417499999995" y="350.85000000000014" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Failover Route (Triggered on Primary Outage)</text>
+</g>
+<g class="edge-label" data-from="Config" data-to="POD_FLEET" data-label="Injects Environment">
+  <rect x="66.8195" y="316.90000000000003" width="109.72000000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="121.67950000000002" y="332.05" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Injects Environment</text>
+</g>
+<g class="edge-label" data-from="Metrics" data-to="POD_FLEET" data-label="Scrapes Real-Time CPU">
+  <rect x="747.8969999999999" y="316.9000000000001" width="131.10399999999998" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="813.449" y="332.05000000000007" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Scrapes Real-Time CPU</text>
+</g>
+<g class="edge-label" data-from="HPA" data-to="POD_FLEET" data-label="Dynamically Scales (2 to 6 Pods)">
+  <rect x="883.001" y="316.9000000000001" width="167.93200000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="966.967" y="332.05000000000007" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Dynamically Scales (2 to 6 Pods)</text>
+</g>
+<g class="node" data-id="Client" data-label="Web Browser / Client Traffic" data-shape="rectangle">
+  <rect x="626.1738749999998" y="84" width="203.48799999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="727.9178749999999" y="102.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Web Browser / Client Traffic</text>
+</g>
+<g class="node" data-id="LoadGen" data-label="HPA Load Generator (load_test.py - 16 Threads)" data-shape="rectangle">
+  <rect x="857.6618749999998" y="84" width="318.34299999999996" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1016.8333749999997" y="102.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">HPA Load Generator (load_test.py - 16 Threads)</text>
+</g>
+<g class="node" data-id="Proxy" data-label="Reverse Proxy / Traffic Director
+(Health Probing &amp; Dynamic Failover Switching)" data-shape="rectangle">
+  <rect x="624.7675416666666" y="240.9" width="309.45099999999985" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="779.4930416666665" y="267.8" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="779.4930416666665" dy="-3.9000000000000012">Reverse Proxy / Traffic Director</tspan><tspan x="779.4930416666665" dy="16.900000000000002">(Health Probing &amp; Dynamic Failover Switching)</tspan></text>
+</g>
+<g class="node" data-id="K8sSvc" data-label="Flask Service (NodePort :30080 / :8080)" data-shape="rectangle">
+  <rect x="240.53949999999998" y="728.6" width="274.6239999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="377.85149999999993" y="747.0500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Flask Service (NodePort :30080 / :8080)</text>
+</g>
+<g class="node" data-id="Config" data-label="ConfigMap: app-config
+REDIS_HOST=redis-service
+REDIS_PORT=6379" data-shape="rectangle">
+  <rect x="56" y="603.9000000000001" width="211.63899999999998" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="161.8195" y="639.2500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="161.8195" dy="-12.350000000000001">ConfigMap: app-config</tspan><tspan x="161.8195" dy="16.900000000000002">REDIS_HOST=redis-service</tspan><tspan x="161.8195" dy="16.900000000000002">REDIS_PORT=6379</tspan></text>
+</g>
+<g class="node" data-id="RedisSvc" data-label="Redis Service (ClusterIP :6379)" data-shape="rectangle">
+  <rect x="479.585" y="970.4" width="224.97699999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="592.0735" y="988.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Redis Service (ClusterIP :6379)</text>
+</g>
+<g class="node" data-id="RedisPod" data-label="Redis Data Store
+(redis:7-alpine | In-Memory Atomic INCR)" data-shape="cylinder">
+  <rect x="455.873" y="1062.3" width="272.40099999999995" height="53.80000000000001" fill="#1e293b" stroke="none" />
+  <line x1="455.873" y1="1062.3" x2="455.873" y2="1116.1" stroke="#e2e8f0" stroke-width="2px" />
+  <line x1="728.2739999999999" y1="1062.3" x2="728.2739999999999" y2="1116.1" stroke="#e2e8f0" stroke-width="2px" />
+  <ellipse cx="592.0735" cy="1116.1" rx="136.20049999999998" ry="7" fill="#1e293b" stroke="#e2e8f0" stroke-width="2px" />
+  <ellipse cx="592.0735" cy="1062.3" rx="136.20049999999998" ry="7" fill="#1e293b" stroke="#e2e8f0" stroke-width="2px" />
+  <text x="592.0735" y="1089.2" text-anchor="middle" font-size="13" font-weight="500" fill="#f8fafc"><tspan x="592.0735" dy="-3.9000000000000012">Redis Data Store</tspan><tspan x="592.0735" dy="16.900000000000002">(redis:7-alpine | In-Memory Atomic INCR)</tspan></text>
+</g>
+<g class="node" data-id="HPA" data-label="Horizontal Pod Autoscaler (HPA)
+Target: 50% CPU | Min: 2 | Max: 6 Replicas" data-shape="rectangle">
+  <rect x="865.6257499999999" y="604.8" width="281.29299999999995" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1006.2722499999999" y="631.6999999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1006.2722499999999" dy="-3.9000000000000012">Horizontal Pod Autoscaler (HPA)</tspan><tspan x="1006.2722499999999" dy="16.900000000000002">Target: 50% CPU | Min: 2 | Max: 6 Replicas</tspan></text>
+</g>
+<g class="node" data-id="Metrics" data-label="Metrics-Server Daemon
+(metrics.k8s.io)" data-shape="rectangle">
+  <rect x="838.7085" y="503" width="183.481" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="930.449" y="529.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="930.449" dy="-3.9000000000000012">Metrics-Server Daemon</tspan><tspan x="930.449" dy="16.900000000000002">(metrics.k8s.io)</tspan></text>
+</g>
+<g class="node" data-id="Pod1" data-label="Pod 1 (Baseline Active - 50m CPU / 64Mi RAM)" data-shape="rectangle">
+  <rect x="810.8505" y="863.5" width="300.55899999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="961.13" y="881.95" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Pod 1 (Baseline Active - 50m CPU / 64Mi RAM)</text>
+</g>
+<g class="node" data-id="Pod2" data-label="Pod 2 (Baseline Active - 50m CPU / 64Mi RAM)" data-shape="rectangle">
+  <rect x="477.84549999999996" y="863.5" width="305.00500000000005" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="630.348" y="881.95" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Pod 2 (Baseline Active - 50m CPU / 64Mi RAM)</text>
+</g>
+<g class="node" data-id="Pod3" data-label="Pods 3..6 (Autoscaled Under Traffic Surge)" data-shape="rectangle">
+  <rect x="158.17850000000004" y="863.5" width="291.667" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="304.01200000000006" y="881.95" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Pods 3..6 (Autoscaled Under Traffic Surge)</text>
+</g>
+<g class="node" data-id="CloudStandby" data-label="Standby Disaster Recovery Server (:5001)
+(Python/Flask Automated Health Daemon)" data-shape="rectangle">
+  <rect x="1222.9187499999998" y="459.0000000000001" width="287.962" height="53.800000000000004" rx="0" ry="0" fill="#1e293b" stroke="#ef4444" stroke-width="2px" />
+  <text x="1366.8997499999998" y="485.9000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="#f8fafc"><tspan x="1366.8997499999998" dy="-3.9000000000000012">Standby Disaster Recovery Server (:5001)</tspan><tspan x="1366.8997499999998" dy="16.900000000000002">(Python/Flask Automated Health Daemon)</tspan></text>
+</g>
+<g class="node" data-id="CloudState" data-label="DR Standby Backup State
+(Zero-Downtime Guarantee)" data-shape="cylinder">
+  <rect x="1265.8967499999999" y="567.8000000000002" width="202.00599999999994" height="53.80000000000001" fill="var(--_node-fill)" stroke="none" />
+  <line x1="1265.8967499999999" y1="567.8000000000002" x2="1265.8967499999999" y2="621.6000000000001" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="1467.9027499999997" y1="567.8000000000002" x2="1467.9027499999997" y2="621.6000000000001" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1366.8997499999998" cy="621.6000000000001" rx="101.00299999999997" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1366.8997499999998" cy="567.8000000000002" rx="101.00299999999997" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1366.8997499999998" y="594.7000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1366.8997499999998" dy="-3.9000000000000012">DR Standby Backup State</tspan><tspan x="1366.8997499999998" dy="16.900000000000002">(Zero-Downtime Guarantee)</tspan></text>
+</g>
+</svg>
